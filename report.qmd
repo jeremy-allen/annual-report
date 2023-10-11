@@ -1,0 +1,23 @@
+---
+title: "Annual Report"
+format: html
+execute:
+  eval: true
+  echo: false
+  warning: false
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+```
+
+## Current state of the diamonds
+
+```{r}
+# plot showing price as a function of carat
+diamonds |> 
+  ggplot(aes(x = carat, y = price)) +
+  geom_point()
+```
